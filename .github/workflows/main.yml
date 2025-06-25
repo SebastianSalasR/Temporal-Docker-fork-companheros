@@ -22,20 +22,20 @@ jobs:
           node-version: '20.x'
 
       - name: Install Node.js dependencies
-        working-directory: gestion-app
+        working-directory: Temporal-Docker-fork-companheros
         run: npm install
 
       - name: Build docker-compose services
-        working-directory: gestion-app
+        working-directory: Temporal-Docker-fork-companheros
         run: docker compose up -d --build
 
       - name: Wait for services to initialize
         run: sleep 10
 
       - name: Run Selenium test
-        working-directory: gestion-app
-        run: node test_login.js
+        working-directory: Temporal-Docker-fork-companheros
+        run: node Documentos/entrega\ 1/test/test_login.js
 
       - name: Stop containers
-        working-directory: gestion-app
+        working-directory: Temporal-Docker-fork-companheros
         run: docker compose down
