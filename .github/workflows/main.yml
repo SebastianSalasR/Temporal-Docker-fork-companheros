@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Selenium test
         working-directory: Temporal-Docker-fork-companheros
-        run: node Documentos/entrega\ 1/test/test_login.js
+        run: node "Documentos/entrega 1/test/test_login.js"
 
       - name: Stop containers
         working-directory: Temporal-Docker-fork-companheros
